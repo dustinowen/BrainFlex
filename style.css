@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-easy{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-column-start: 2;
+    grid-row-start: 2;
+    /* height: 100vh;
+    width: 100%; */
+    background-image: url("./imgs/gameboard.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: stretch;    
+}
+
+.col-one{
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.col-two{
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+.col-three{
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.col-four{
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+.col-five{
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+
+.col-six{
+    grid-column-start: 7;
+    grid-row-start: 4;
+}
+
+.easy, .medium, .hard{
+    background-color: rgb(211, 33, 199);
+    height: 80%;
+    width: 80%;
+    margin: 0;
+}
+
+
+TO DO -> create buttons for easy-medium-hard -> this will start game
+
+TO DO

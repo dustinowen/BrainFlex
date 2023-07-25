@@ -10,7 +10,7 @@
 
 ## Screenshots for Wireframes
 
-<img src="/imgs/brain_flex_4x4.png">
+<img src="/imgs/4x4.png">
 
 
 

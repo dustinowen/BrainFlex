@@ -3,7 +3,7 @@ A memory skills challenge in which the player must pick two cards at a time to t
 
 ## Screenshots
 
-<img src="/imgs/brain_flex_4x4.png" height=300px>
+<img src="/imgs/4x4.png" height=300px>
 
 
 ## Technologies Used:
