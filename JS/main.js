@@ -7,6 +7,7 @@
 
 /*----- state variables -----*/
 
+let levelChoice = 'easy'
 let livesEasy
 let livesMedium
 let timeHard
@@ -18,6 +19,7 @@ let timeHard
 
 
 /*----- cached elements  -----*/
+
 
 
 
@@ -43,3 +45,13 @@ let timeHard
 
 
 /*----- functions -----*/
+// init();
+
+function ren (){
+    if (levelChoice == 'easy'){
+        document.getElementsByClassName('hard').classList.add('hard-level');
+        // element.classList.add('hidden');
+    }
+}
+
+

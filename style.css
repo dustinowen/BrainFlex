@@ -2,21 +2,171 @@
     box-sizing: border-box;
 }
 
-.container-easy{
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(8,1fr);
-    grid-column-start: 2;
-    grid-row-start: 2;
-    /* height: 100vh;
-    width: 100%; */
-    background-image: url("./imgs/gameboard.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: stretch;    
+button{
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
 }
 
-.col-one{
+.gameboard-container{
+    display: grid;
+    grid-template-columns: repeat(9,10vh);
+    grid-template-rows: repeat(9,10vh);
+    background-image: url("./imgs/gameboard.png");
+    background-size: 90vh;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+#C2-R3{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+#C2-R4{
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+#C2-R5{
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+#C2-R6{
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+#C3-R3{
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+#C3-R4{
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+#C3-R5{
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+#C3-R6{
+    grid-column-start: 3;
+    grid-row-start: 6;
+}
+#C4-R3{
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+#C4-R4{
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+#C4-R5{
+    grid-column-start: 4;
+    grid-row-start: 5;
+}
+#C4-R6{
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+#C5-R3{
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+#C5-R4{
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+#C5-R5{
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+#C5-R6{
+    grid-column-start: 5;
+    grid-row-start: 6;
+}
+#C6-R3{
+    grid-column-start: 6;
+    grid-row-start: 3;
+}
+#C6-R4{
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+#C6-R5{
+    grid-column-start: 6;
+    grid-row-start: 5;
+}
+#C6-R6{
+    grid-column-start: 6;
+    grid-row-start: 6;
+}
+#C7-R3{
+    grid-column-start: 7;
+    grid-row-start: 3;
+}
+#C7-R4{
+    grid-column-start: 7;
+    grid-row-start: 4;
+}
+#C7-R5{
+    grid-column-start: 7;
+    grid-row-start: 5;
+}
+#C7-R6{
+    grid-column-start: 7;
+    grid-row-start: 6;
+}
+#C8-R3{
+    grid-column-start: 8;
+    grid-row-start: 3;
+}
+#C8-R4{
+    grid-column-start: 8;
+    grid-row-start: 4;
+}
+#C8-R5{
+    grid-column-start: 8;
+    grid-row-start: 5;
+}
+#C8-R6{
+    grid-column-start: 8;
+    grid-row-start: 6;
+}
+
+#life-0{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 8; 
+    height: 8vh;
+}
+#life-1{
+    grid-column-start: 4;
+    grid-row-start: 8;   
+    height: 8vh;
+}
+#life-2{
+    grid-column-start: 5;
+    grid-row-start: 8;    
+    height: 8vh; 
+}
+#life-3{
+    grid-column-start: 6;
+    grid-row-start: 8; 
+    height: 8vh; 
+}
+#life-4{
+    grid-column-start: 7;
+    grid-row-start: 8;    
+    height: 8vh; 
+}
+
+
+
+
+
+
+/* .col-one{
     grid-column-start: 2;
     grid-row-start: 4;
 }
@@ -44,14 +194,27 @@
 .col-six{
     grid-column-start: 7;
     grid-row-start: 4;
-}
+} */
 
-.easy, .medium, .hard{
+.game-squares{
     background-color: rgb(211, 33, 199);
     height: 80%;
     width: 80%;
     margin: 0;
 }
+
+.medium-level{
+    visibility: hidden;
+}
+
+.hard-level{
+    visibility: hidden;
+}
+
+
+
+
+
 
 
 TO DO -> create buttons for easy-medium-hard -> this will start game
