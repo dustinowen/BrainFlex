@@ -93,6 +93,9 @@ let livesEasy = 5;
 let livesMedium = 4;
 let timeHard = 60000;
 
+let choiceOne;
+let choiceTwo;
+
 
 
 
@@ -100,7 +103,7 @@ let timeHard = 60000;
 
 const squaresEls = document.querySelectorAll('.game-squares')
 
-shuffle(easy);
+console.log(squaresEls);
 
 
 
@@ -115,6 +118,7 @@ squaresEls.forEach(function(el, index){
         const clickedCard = easy[index]
         console.log(clickedCard)
         el.setAttribute('src', clickedCard.image)
+            // if (choiceOne === null)
 
     } else if (levelChoice == "medium"){
         const clickedCard = medium[index]
@@ -168,8 +172,7 @@ function loadBoard(){
     if (levelChoice == 'easy'){
         squaresEls.forEach((squareEl, index)=>{
         let current = easy[index]
-        if (current) {
-            // squareEl.setAttribute('src', current.image)
+        if (current) {            
         }  else  {
                 squareEl.classList.add('hidden')
             }
@@ -179,7 +182,6 @@ function loadBoard(){
           squaresEls.forEach((squareEl, index)=>{
             let current = medium[index]
             if (current) {
-                // squareEl.setAttribute('src', current.image)
             }  else  {
                 squareEl.classList.add('hidden')
             }
@@ -189,19 +191,13 @@ function loadBoard(){
           squaresEls.forEach((squareEl, index)=>{
             let current = hard[index]
             if (current) {
-                // squareEl.setAttribute('src', current.image)
-                loadTimer();
             }  else  {
                 squareEl.classList.add('hidden')
             }
           })
         }
     }
-    
-function loadTimer(){
-    // add a timer to the board for hard level -> 60 second -> game over if not solved 
 
-}
     
 
 loadBoard()
