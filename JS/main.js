@@ -17,7 +17,7 @@ const easy =[
     {value: 8, image: './imgs/cards/easy/emoji.08.png'},
     {value: 8, image: './imgs/cards/easy/emoji.08.png'},
     {value: 9, image: './imgs/cards/easy/emoji.09.png'},
-    {value: 9, image: './imgs/cards/easy/emoji.09.png'},
+    {value: 9, image: './imgs/cards/easy/emoji.09.png'}
 
 ]
 const medium =[
@@ -79,7 +79,7 @@ const hard =[
     {value: 15, image: './imgs/cards/card.08.png'}
 ]
 
-
+// console.log(easy[0].value)
 
 
 
@@ -88,13 +88,9 @@ const hard =[
 
 /*----- state variables -----*/
 
-let levelChoice = 'easy'
-let livesEasy = 5;
-let livesMedium = 4;
-let timeHard = 60000;
-
-let choiceOne;
-let choiceTwo;
+let levelChoice = 'medium'
+let lives = 5;
+let choiceOne = 0;
 
 
 
@@ -103,7 +99,6 @@ let choiceTwo;
 
 const squaresEls = document.querySelectorAll('.game-squares')
 
-console.log(squaresEls);
 
 
 
@@ -115,20 +110,55 @@ squaresEls.forEach(function(el, index){
     el.addEventListener('click', function(){
 
         if (levelChoice == 'easy'){
-        const clickedCard = easy[index]
-        console.log(clickedCard)
-        el.setAttribute('src', clickedCard.image)
-            // if (choiceOne === null)
-
-    } else if (levelChoice == "medium"){
-        const clickedCard = medium[index]
-        console.log(clickedCard)
-        el.setAttribute('src', clickedCard.image)
-
-    } else {
-        const clickedCard = hard[index]
-        console.log(clickedCard)
-        el.setAttribute('src', clickedCard.image)
+        const clickedCard = easy[index].value;
+        el.setAttribute('src', easy[clickedCard].image)
+            if (choiceOne == 0){
+                choiceOne = easy[index].value;
+                console.log(choiceOne)
+            } else {
+                console.log(easy[clickedCard].value)
+                if (easy[choiceOne].value === easy[clickedCard].value){
+                    console.log ('its a pair')
+                }   else {
+                    console.log ('not a pair')
+                    livesEasy --
+                }
+                choiceOne = 0;
+            }
+            
+        } else if (levelChoice == "medium"){
+            const clickedCard = medium[index].value;
+            el.setAttribute('src', medium[clickedCard].image)
+                if (choiceOne == 0){
+                    choiceOne = medium[index].value;
+                    console.log(choiceOne)
+                } else {
+                    console.log(medium[clickedCard].value)
+                    if (easy[choiceOne].value === medium[clickedCard].value){
+                        console.log ('its a pair')
+                    }   else {
+                        console.log ('not a pair')
+                        lives --
+                    }
+                    choiceOne = 0;
+                }
+    
+        } else {
+            const clickedCard = hard[index].value;
+            el.setAttribute('src', hard[clickedCard].image)
+                if (choiceOne == 0){
+                    choiceOne = hard[index].value;
+                    console.log(choiceOne)
+                } else {
+                    console.log(hard[clickedCard].value)
+                    if (easy[choiceOne].value === hard[clickedCard].value){
+                        console.log ('its a pair')
+                    }   else {
+                        console.log ('not a pair')
+                        lives --
+                    }
+                    choiceOne = 0;
+                }
         }
     });
 });
@@ -136,19 +166,17 @@ squaresEls.forEach(function(el, index){
 
 // TO DO - easy-medium-hard buttons=> start game 
 
-// easy => hide .hard, .medium
-
-// medium => hide .hard
-
-// hard => load timed game
-
 
 
 
 
 
 /*----- functions -----*/
-// init();
+function init(){
+    loadBoard();
+    scoreboard();
+    shuffle(levelChoice);
+}
 
 function render (){
 }
@@ -199,5 +227,39 @@ function loadBoard(){
     }
 
     
+function scoreboard(){
+    // render lives update after play
+    const imgs = document.querySelectorAll('.brains img');
+
+    if (lives == 5){
+        for (const life5 of 'imgs'){
+            // .brains.classList.remove('display')
+            // need to remove hidden display of img #life-5
+        }
+
+
+
+    } else if (lives == 4){
+
+    } else if (lives == 3){
+
+    } else if (lives == 2){
+
+    } else if (lives == 1){
+
+    } else {
+
+    }
+
+
+
+
+
+
+
+
+}
+
 
 loadBoard()
+scoreboard()
