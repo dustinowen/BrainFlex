@@ -78,9 +78,14 @@ const hard =[
     {value: 15, image: './imgs/cards/card.08.png'},
     {value: 15, image: './imgs/cards/card.08.png'}
 ]
-
-// console.log(easy[0].value)
-
+const brainImgs = [
+    {value: 5, src: "./imgs/scoreboard/brain.hearteyes.png"},
+    {value: 4, src: "./imgs/scoreboard/brain.hearteyes.png"},
+    {value: 3, src: "./imgs/scoreboard/brain.hearteyes.png"},
+    {value: 2, src: "./imgs/scoreboard/brain.hearteyes.png"},
+    {value: 1, src: "./imgs/scoreboard/brain.hearteyes.png"},
+    {value: 0, src: "./imgs/scoreboard/brain.hearteyes.png"},
+]
 
 
 
@@ -88,9 +93,10 @@ const hard =[
 
 /*----- state variables -----*/
 
-let levelChoice = 'medium'
+let levelChoice = 'easy'
 let lives = 5;
-let choiceOne = 0;
+let choiceOne = null;
+let choiceOneDiv = null;
 
 
 
@@ -98,7 +104,7 @@ let choiceOne = 0;
 /*----- cached elements  -----*/
 
 const squaresEls = document.querySelectorAll('.game-squares')
-
+const brainEls = document.querySelectorAll('brain-container')
 
 
 
@@ -106,65 +112,73 @@ const squaresEls = document.querySelectorAll('.game-squares')
 
 /*----- event listeners -----*/
 
-squaresEls.forEach(function(el, index){
-    el.addEventListener('click', function(){
+squaresEls.forEach(function (el, index) {
+    el.addEventListener('click', function (evt) {
+        let clickedCard
 
-        if (levelChoice == 'easy'){
-        const clickedCard = easy[index].value;
-        el.setAttribute('src', easy[clickedCard].image)
-            if (choiceOne == 0){
-                choiceOne = easy[index].value;
-                console.log(choiceOne)
+
+        if (levelChoice == 'easy') {
+            clickedCard = easy[index]
+            el.setAttribute('src', clickedCard.image)
+            if (choiceOne === null) {
+                choiceOne = clickedCard;
+                choiceOneDiv = evt.target
             } else {
-                console.log(easy[clickedCard].value)
-                if (easy[choiceOne].value === easy[clickedCard].value){
-                    console.log ('its a pair')
-                }   else {
-                    console.log ('not a pair')
-                    livesEasy --
+                if (choiceOne.value !== clickedCard.value) {
+                    setTimeout(function () { 
+                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
+                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
+                    console.log('not a pair')
+                    lives--
+                    choiceOne = null;
+                    choiceOneDiv = null;
+                    }, 2000);
                 }
-                choiceOne = 0;
             }
-            
-        } else if (levelChoice == "medium"){
-            const clickedCard = medium[index].value;
-            el.setAttribute('src', medium[clickedCard].image)
-                if (choiceOne == 0){
-                    choiceOne = medium[index].value;
-                    console.log(choiceOne)
-                } else {
-                    console.log(medium[clickedCard].value)
-                    if (easy[choiceOne].value === medium[clickedCard].value){
-                        console.log ('its a pair')
-                    }   else {
-                        console.log ('not a pair')
-                        lives --
+        } else if (levelChoice == 'medium') {
+            clickedCard = medium[index]
+            el.setAttribute('src', clickedCard.image)
+            if (choiceOne === null) {
+                        choiceOne = clickedCard;
+                        choiceOneDiv = evt.target
+                    } else {
+                        if (choiceOne.value !== clickedCard.value) {
+                            setTimeout(function () { 
+                            choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
+                            squaresEls[index].setAttribute('src', './imgs/cards/square.png')
+                            console.log('not a pair')
+                            lives--
+                            choiceOne = null;
+                            choiceOneDiv = null;
+                            }, 2000);
+                        }
                     }
-                    choiceOne = 0;
-                }
-    
         } else {
-            const clickedCard = hard[index].value;
-            el.setAttribute('src', hard[clickedCard].image)
-                if (choiceOne == 0){
-                    choiceOne = hard[index].value;
-                    console.log(choiceOne)
-                } else {
-                    console.log(hard[clickedCard].value)
-                    if (easy[choiceOne].value === hard[clickedCard].value){
-                        console.log ('its a pair')
-                    }   else {
-                        console.log ('not a pair')
-                        lives --
-                    }
-                    choiceOne = 0;
+            clickedCard = hard[index]
+            el.setAttribute('src', clickedCard.image)
+            if (choiceOne === null) {
+                            choiceOne = clickedCard;
+                            choiceOneDiv = evt.target
+                        } else {
+                             if (choiceOne.value !== clickedCard.value) {
+                                setTimeout(function () { 
+                                choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
+                                squaresEls[index].setAttribute('src', './imgs/cards/square.png')
+                                    //alert  ("not a pair")
+                                console.log('not a pair')
+                                lives--
+                                choiceOne = null;
+                                choiceOneDiv = null;
+                                }, 2000);
+                            }
+                        }
                 }
-        }
-    });
-});
+            })
+        });
+        
+    
 
 
-// TO DO - easy-medium-hard buttons=> start game 
 
 
 
@@ -172,9 +186,10 @@ squaresEls.forEach(function(el, index){
 
 
 /*----- functions -----*/
+
 function init(){
     loadBoard();
-    scoreboard();
+    loadBrains();
     shuffle(levelChoice);
 }
 
@@ -225,31 +240,37 @@ function loadBoard(){
           })
         }
     }
-
-    
-function scoreboard(){
-    // render lives update after play
-    const imgs = document.querySelectorAll('.brains img');
-
-    if (lives == 5){
-        for (const life5 of 'imgs'){
-            // .brains.classList.remove('display')
-            // need to remove hidden display of img #life-5
-        }
+   
+function scoreDisplay(){
+        if (lives == 5){
+            brains4.classList.remove('display')
+        }};
+        
+    // }
 
 
+    //     // render lives update after play
+    //     const imgs = document.querySelectorAll('.brains img');
+        
+    //     if (lives == 5){
+    //         for (const life5 of 'imgs'){
+    //             // .brains.classList.remove('display')
+    //             // need to remove hidden display of img #life-5
+    //         }
+            
+            
+            
+    //     } else if (lives == 4){
+            
+    //     } else if (lives == 3){
 
-    } else if (lives == 4){
+    // } else if (lives == 2){
 
-    } else if (lives == 3){
+    // } else if (lives == 1){
 
-    } else if (lives == 2){
+    // } else {
 
-    } else if (lives == 1){
-
-    } else {
-
-    }
+    // }
 
 
 
@@ -258,8 +279,8 @@ function scoreboard(){
 
 
 
-}
+
 
 
 loadBoard()
-scoreboard()
+// scoreboard()

@@ -15,17 +15,6 @@ button{
     background-repeat: no-repeat;
 }
 
-img{
-    background-size: contain;
-}
-
-img.game-squares{
-    border: 2px solid black;
-}
-
-/* .brains{
-    display: none;
-} */
 
 .card-container{
     grid-column: 2 / span 7;
@@ -47,9 +36,43 @@ img.game-squares{
     border: 1px solid green;
 }
 
-#life-0, #life-1, #life-2, #life-3, #life-4{
+.play-again{
+    grid-column: 4 / span 3;
+    grid-row: 7;
+    display: grid;
+    grid-template-columns:30vh;
+    grid-template-rows: 10vh;
+    justify-content: center;
+    align-content: center;
+}
+
+button{
+    border-radius: 100px;
+    font-size: 3vh;
+}
+
+.gameover-container{
+    grid-column: 2/ span 7;
+    grid-row: 4 / span 3;
+    display: grid;
+    background-image: url('./imgs/gameover.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+img{
+    background-size: contain;
+}
+
+img.game-squares{
+    border: 2px solid black;
+}
+
+.brains4, .brains3, .brains2, .brains1, .brains0{
     height: 8vh;
     place-self: center;
+    display: none;
 }
 
 .game-squares{
@@ -60,7 +83,7 @@ img.game-squares{
     place-self: center;
 }
 
-.hidden, .brains{
+.hidden{
     display: none;
 }
 
