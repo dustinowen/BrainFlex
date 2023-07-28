@@ -1,82 +1,83 @@
 /*----- constants -----*/
+
 const easy =[
-    {value: 1, image: './imgs/cards/easy/emoji.01.png'},
-    {value: 1, image: './imgs/cards/easy/emoji.01.png'},
-    {value: 2, image: './imgs/cards/easy/emoji.02.png'},
-    {value: 2, image: './imgs/cards/easy/emoji.02.png'},
-    {value: 3, image: './imgs/cards/easy/emoji.03.png'},
-    {value: 3, image: './imgs/cards/easy/emoji.03.png'},
-    {value: 4, image: './imgs/cards/easy/emoji.04.png'},
-    {value: 4, image: './imgs/cards/easy/emoji.04.png'},
-    {value: 5, image: './imgs/cards/easy/emoji.05.png'},
-    {value: 5, image: './imgs/cards/easy/emoji.05.png'},
-    {value: 6, image: './imgs/cards/easy/emoji.06.png'},
-    {value: 6, image: './imgs/cards/easy/emoji.06.png'},
-    {value: 7, image: './imgs/cards/easy/emoji.07.png'},
-    {value: 7, image: './imgs/cards/easy/emoji.07.png'},
-    {value: 8, image: './imgs/cards/easy/emoji.08.png'},
-    {value: 8, image: './imgs/cards/easy/emoji.08.png'},
-    {value: 9, image: './imgs/cards/easy/emoji.09.png'},
-    {value: 9, image: './imgs/cards/easy/emoji.09.png'}
+    {value: 1, image: './imgs/cards/easy/easy-01.png', matched: false},
+    {value: 1, image: './imgs/cards/easy/easy-01.png', matched: false},
+    {value: 2, image: './imgs/cards/easy/easy-02.png', matched: false},
+    {value: 2, image: './imgs/cards/easy/easy-02.png', matched: false},
+    {value: 3, image: './imgs/cards/easy/easy-03.png', matched: false},
+    {value: 3, image: './imgs/cards/easy/easy-03.png', matched: false},
+    {value: 4, image: './imgs/cards/easy/easy-04.png', matched: false},
+    {value: 4, image: './imgs/cards/easy/easy-04.png', matched: false},
+    {value: 5, image: './imgs/cards/easy/easy-05.png', matched: false},
+    {value: 5, image: './imgs/cards/easy/easy-05.png', matched: false},
+    {value: 6, image: './imgs/cards/easy/easy-06.png', matched: false},
+    {value: 6, image: './imgs/cards/easy/easy-06.png', matched: false},
+    {value: 7, image: './imgs/cards/easy/easy-07.png', matched: false},
+    {value: 7, image: './imgs/cards/easy/easy-07.png', matched: false},
+    {value: 8, image: './imgs/cards/easy/easy-08.png', matched: false},
+    {value: 8, image: './imgs/cards/easy/easy-08.png', matched: false},
+    {value: 9, image: './imgs/cards/easy/easy-09.png', matched: false},
+    {value: 9, image: './imgs/cards/easy/easy-09.png', matched: false}
 
 ]
 const medium =[
-    {value: 1, image: './imgs/cards/card.01.png'},
-    {value: 1, image: './imgs/cards/card.01.png'},
-    {value: 2, image: './imgs/cards/card.02.png'},
-    {value: 2, image: './imgs/cards/card.02.png'},
-    {value: 3, image: './imgs/cards/card.03.png'},
-    {value: 3, image: './imgs/cards/card.03.png'},
-    {value: 4, image: './imgs/cards/card.04.png'},
-    {value: 4, image: './imgs/cards/card.04.png'},
-    {value: 5, image: './imgs/cards/card.05.png'},
-    {value: 5, image: './imgs/cards/card.05.png'},
-    {value: 6, image: './imgs/cards/card.06.png'},
-    {value: 6, image: './imgs/cards/card.06.png'},
-    {value: 7, image: './imgs/cards/card.07.png'},
-    {value: 7, image: './imgs/cards/card.07.png'},
-    {value: 8, image: './imgs/cards/card.08.png'},
-    {value: 8, image: './imgs/cards/card.08.png'},
-    {value: 9, image: './imgs/cards/card.09.png'},
-    {value: 9, image: './imgs/cards/card.09.png'},
-    {value: 10, image: './imgs/cards/card.10.png'},
-    {value: 10, image: './imgs/cards/card.10.png'},
-    {value: 11, image: './imgs/cards/card.11.png'},
-    {value: 11, image: './imgs/cards/card.11.png'},
-    {value: 12, image: './imgs/cards/card.12.png'},
-    {value: 12, image: './imgs/cards/card.12.png'}
+    {value: 1, image: './imgs/cards/medium/medium-01.png', matched: false},
+    {value: 1, image: './imgs/cards/medium/medium-01.png', matched: false},
+    {value: 2, image: './imgs/cards/medium/medium-02.png', matched: false},
+    {value: 2, image: './imgs/cards/medium/medium-02.png', matched: false},
+    {value: 3, image: './imgs/cards/medium/medium-03.png', matched: false},
+    {value: 3, image: './imgs/cards/medium/medium-03.png', matched: false},
+    {value: 4, image: './imgs/cards/medium/medium-04.png', matched: false},
+    {value: 4, image: './imgs/cards/medium/medium-04.png', matched: false},
+    {value: 5, image: './imgs/cards/medium/medium-05.png', matched: false},
+    {value: 5, image: './imgs/cards/medium/medium-05.png', matched: false},
+    {value: 6, image: './imgs/cards/medium/medium-06.png', matched: false},
+    {value: 6, image: './imgs/cards/medium/medium-06.png', matched: false},
+    {value: 7, image: './imgs/cards/medium/medium-07.png', matched: false},
+    {value: 7, image: './imgs/cards/medium/medium-07.png', matched: false},
+    {value: 8, image: './imgs/cards/medium/medium-08.png', matched: false},
+    {value: 8, image: './imgs/cards/medium/medium-08.png', matched: false},
+    {value: 9, image: './imgs/cards/medium/medium-09.png', matched: false},
+    {value: 9, image: './imgs/cards/medium/medium-09.png', matched: false},
+    {value: 10, image: './imgs/cards/medium/medium-10.png', matched: false},
+    {value: 10, image: './imgs/cards/medium/medium-10.png', matched: false},
+    {value: 11, image: './imgs/cards/medium/medium-11.png', matched: false},
+    {value: 11, image: './imgs/cards/medium/medium-11.png', matched: false},
+    {value: 12, image: './imgs/cards/medium/medium-12.png', matched: false},
+    {value: 12, image: './imgs/cards/medium/medium-12.png', matched: false}
 ]
 const hard =[
-    {value: 1, image: './imgs/cards/card.01.png'},
-    {value: 1, image: './imgs/cards/card.01.png'},
-    {value: 2, image: './imgs/cards/card.02.png'},
-    {value: 2, image: './imgs/cards/card.02.png'},
-    {value: 3, image: './imgs/cards/card.03.png'},
-    {value: 3, image: './imgs/cards/card.03.png'},
-    {value: 4, image: './imgs/cards/card.04.png'},
-    {value: 4, image: './imgs/cards/card.04.png'},
-    {value: 5, image: './imgs/cards/card.05.png'},
-    {value: 5, image: './imgs/cards/card.05.png'},
-    {value: 6, image: './imgs/cards/card.06.png'},
-    {value: 6, image: './imgs/cards/card.06.png'},
-    {value: 7, image: './imgs/cards/card.07.png'},
-    {value: 7, image: './imgs/cards/card.07.png'},
-    {value: 8, image: './imgs/cards/card.08.png'},
-    {value: 8, image: './imgs/cards/card.08.png'},
-    {value: 9, image: './imgs/cards/card.08.png'},
-    {value: 9, image: './imgs/cards/card.08.png'},
-    {value: 10, image: './imgs/cards/card.07.png'},
-    {value: 10, image: './imgs/cards/card.07.png'},
-    {value: 11, image: './imgs/cards/card.08.png'},
-    {value: 11, image: './imgs/cards/card.08.png'},
-    {value: 12, image: './imgs/cards/card.08.png'},
-    {value: 12, image: './imgs/cards/card.08.png'},
-    {value: 13, image: './imgs/cards/card.07.png'},
-    {value: 13, image: './imgs/cards/card.07.png'},
-    {value: 14, image: './imgs/cards/card.08.png'},
-    {value: 14, image: './imgs/cards/card.08.png'},
-    {value: 15, image: './imgs/cards/card.08.png'},
-    {value: 15, image: './imgs/cards/card.08.png'}
+    {value: 1, image: './imgs/cards/hard/hard-01.png', matched: false},
+    {value: 1, image: './imgs/cards/hard/hard-01.png', matched: false},
+    {value: 2, image: './imgs/cards/hard/hard-02.png', matched: false},
+    {value: 2, image: './imgs/cards/hard/hard-02.png', matched: false},
+    {value: 3, image: './imgs/cards/hard/hard-03.png', matched: false},
+    {value: 3, image: './imgs/cards/hard/hard-03.png', matched: false},
+    {value: 4, image: './imgs/cards/hard/hard-04.png', matched: false},
+    {value: 4, image: './imgs/cards/hard/hard-04.png', matched: false},
+    {value: 5, image: './imgs/cards/hard/hard-05.png', matched: false},
+    {value: 5, image: './imgs/cards/hard/hard-05.png', matched: false},
+    {value: 6, image: './imgs/cards/hard/hard-06.png', matched: false},
+    {value: 6, image: './imgs/cards/hard/hard-06.png', matched: false},
+    {value: 7, image: './imgs/cards/hard/hard-07.png', matched: false},
+    {value: 7, image: './imgs/cards/hard/hard-07.png', matched: false},
+    {value: 8, image: './imgs/cards/hard/hard-08.png', matched: false},
+    {value: 8, image: './imgs/cards/hard/hard-08.png', matched: false},
+    {value: 9, image: './imgs/cards/hard/hard-09.png', matched: false},
+    {value: 9, image: './imgs/cards/hard/hard-09.png', matched: false},
+    {value: 10, image: './imgs/cards/hard/hard-10.png', matched: false},
+    {value: 10, image: './imgs/cards/hard/hard-10.png', matched: false},
+    {value: 11, image: './imgs/cards/hard/hard-11.png', matched: false},
+    {value: 11, image: './imgs/cards/hard/hard-11.png', matched: false},
+    {value: 12, image: './imgs/cards/hard/hard-12.png', matched: false},
+    {value: 12, image: './imgs/cards/hard/hard-12.png', matched: false},
+    {value: 13, image: './imgs/cards/hard/hard-13.png', matched: false},
+    {value: 13, image: './imgs/cards/hard/hard-13.png', matched: false},
+    {value: 14, image: './imgs/cards/hard/hard-14.png', matched: false},
+    {value: 14, image: './imgs/cards/hard/hard-14.png', matched: false},
+    {value: 15, image: './imgs/cards/hard/hard-15.png', matched: false},
+    {value: 15, image: './imgs/cards/hard/hard-15.png', matched: false}
 ]
 const brainImgs = [
     {value: 5, src: "./imgs/scoreboard/brain.hearteyes.png"},
@@ -86,17 +87,24 @@ const brainImgs = [
     {value: 1, src: "./imgs/scoreboard/brain.hearteyes.png"},
     {value: 0, src: "./imgs/scoreboard/brain.hearteyes.png"},
 ]
-
+const setup = [
+];
+const levelSetup = [
+    {value: easy},
+    {value: medium},
+    {value: hard}
+]
 
 
 
 
 /*----- state variables -----*/
 
-let levelChoice = 'easy'
+let levelChoice
 let lives = 5;
 let choiceOne = null;
 let choiceOneDiv = null;
+// let turnAvailable = null;
 
 
 
@@ -104,7 +112,19 @@ let choiceOneDiv = null;
 /*----- cached elements  -----*/
 
 const squaresEls = document.querySelectorAll('.game-squares')
-const brainEls = document.querySelectorAll('brain-container')
+const brainEls = document.querySelectorAll('.brain-container')
+const btnEls = document.querySelectorAll('.level')
+const lvlSelect = document.getElementsByClassName('level-select')
+const gameOverContainer = document.querySelector('.gameover-container')
+const gameboardContainer = document.querySelector('.gameboard-container')
+const btnContainer = document.querySelector('.button-container');
+const againContainer = document.querySelector('.play-again-container');
+const cardContainer = document.querySelector('.card-container');
+const fiveLives = document.querySelector('.brains4');
+const fourLives = document.querySelector('.brains3');
+const threeLives = document.querySelector('.brains2');
+const twoLives = document.querySelector('.brains1');
+const oneLives = document.querySelector('.brains0');
 
 
 
@@ -114,70 +134,113 @@ const brainEls = document.querySelectorAll('brain-container')
 
 squaresEls.forEach(function (el, index) {
     el.addEventListener('click', function (evt) {
+        console.log(el)
         let clickedCard
 
-
-        if (levelChoice == 'easy') {
+        if (levelChoice === easy) {
             clickedCard = easy[index]
             el.setAttribute('src', clickedCard.image)
+
             if (choiceOne === null) {
+                // && clickedCard.matched === false ) {
                 choiceOne = clickedCard;
-                choiceOneDiv = evt.target
+                choiceOneDiv = evt.target;
+            } else if (choiceOne.value === clickedCard.value) {
+console.log("pair")
+                    // choiceOne.matched = true;
+                    // clickedCard.matched = true;
+                    choiceOne = null;
+                    choiceOneDiv = null;
             } else {
-                if (choiceOne.value !== clickedCard.value) {
                     setTimeout(function () { 
                     choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
                     squaresEls[index].setAttribute('src', './imgs/cards/square.png')
                     console.log('not a pair')
-                    lives--
                     choiceOne = null;
                     choiceOneDiv = null;
-                    }, 2000);
+                    }, 500);
+                    lives--
+                    render();
                 }
-            }
-        } else if (levelChoice == 'medium') {
+
+        } else if (levelChoice === medium) {
             clickedCard = medium[index]
             el.setAttribute('src', clickedCard.image)
+
             if (choiceOne === null) {
-                        choiceOne = clickedCard;
-                        choiceOneDiv = evt.target
-                    } else {
-                        if (choiceOne.value !== clickedCard.value) {
-                            setTimeout(function () { 
-                            choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
-                            squaresEls[index].setAttribute('src', './imgs/cards/square.png')
-                            console.log('not a pair')
-                            lives--
-                            choiceOne = null;
-                            choiceOneDiv = null;
-                            }, 2000);
-                        }
-                    }
-        } else {
-            clickedCard = hard[index]
-            el.setAttribute('src', clickedCard.image)
-            if (choiceOne === null) {
-                            choiceOne = clickedCard;
-                            choiceOneDiv = evt.target
-                        } else {
-                             if (choiceOne.value !== clickedCard.value) {
-                                setTimeout(function () { 
-                                choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
-                                squaresEls[index].setAttribute('src', './imgs/cards/square.png')
-                                    //alert  ("not a pair")
-                                console.log('not a pair')
-                                lives--
-                                choiceOne = null;
-                                choiceOneDiv = null;
-                                }, 2000);
-                            }
-                        }
+                // && clickedCard.matched === false) {
+                // clickedCard.matched = true;
+                choiceOne = clickedCard;
+                choiceOneDiv = evt.target
+            } else if (choiceOne.value === clickedCard.value){
+console.log("pair")
+                // choiceOne.matched = true;
+                // clickedCard.matched = true;
+                choiceOne = null;
+                choiceOneDiv = null;
+            } else {
+                setTimeout(function () { 
+                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
+                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
+                    console.log('not a pair')
+                    choiceOne = null;
+                    choiceOneDiv = null;
+                    }, 1000);
+                    lives--
+                    render();
                 }
-            })
-        });
-        
+                
+        } else if (levelChoice === hard) {
+            clickedCard = hard[index];
+            el.setAttribute('src', clickedCard.image);
+                
+            if (choiceOne === null) {
+                // && clickedCard.matched === false) {
+                // choiceOne.matched = true;
+                choiceOne = clickedCard;
+                choiceOneDiv = evt.target;
+            } else if (choiceOne.value === clickedCard.value) {
+console.log("pair");
+                choiceOne = null;
+                choiceOneDiv = null;
+            } else {
+                    setTimeout(function () { 
+                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
+                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
+console.log('not a pair')
+                    choiceOne = null;
+                    choiceOneDiv = null;
+                }, 1000);
+                lives--
+                render();
+            } 
+        }
+    })
+}); 
     
 
+const again = document.querySelector('.play-again-button')
+
+    again.addEventListener('click', function(){
+            location.reload();
+
+            console.log('play again button')
+        });
+
+
+
+
+const levelSelectButtons = document.querySelectorAll('.lvlSelect')
+
+    levelSelectButtons.forEach(function(bttn){
+        bttn.addEventListener('click', function(evt){     
+        levelChoice = evt.target.textContent;
+        console.log(squaresEls)
+        })
+    })
+        
+        
+        
 
 
 
@@ -185,17 +248,38 @@ squaresEls.forEach(function (el, index) {
 
 
 
+        
 /*----- functions -----*/
+        
 
 function init(){
-    loadBoard();
-    loadBrains();
-    shuffle(levelChoice);
-}
+    renderBoard(null);
+    clearBrains();
+    setLevel();
+    againContainer.remove();
+    gameOverContainer.remove();
+    // btnContainer.remove()
+    document.querySelector('body').appendChild(gameboardContainer);
+    }
 
-function render (){
-}
 
+//SET LEVEL BASED ON BUTTON SELECTION => SHUFFLE CARDS => RENDER BOARD
+function setLevel(){
+    btnEls.forEach(function(el, index) {
+        console.log(el)
+     el.addEventListener('click', () => {
+         let clickedCard = levelSetup[index]
+console.log(clickedCard)
+         levelChoice = levelSetup[index].value;
+console.log(levelChoice);
+         shuffle(levelChoice);
+         renderBoard(levelChoice);
+     })
+})
+};
+
+
+// SHUFFLE ARRAY => easy, med, hard => SHUFFLE CARD PLACEMENT ON BOARD
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
     
@@ -209,78 +293,138 @@ function shuffle(array) {
         }
         
         return array;
-    }
+    }  
     
-function loadBoard(){
-    if (levelChoice == 'easy'){
+// ITERATE THROUGH OBJECTS BASED ON LEVEL => CREATE SQUARE FOR INDEX WITH VALUE, HIDE OTHERS
+    function renderBoard(levelChoice){
+
         squaresEls.forEach((squareEl, index)=>{
-        let current = easy[index]
-        if (current) {            
-        }  else  {
-                squareEl.classList.add('hidden')
-            }
+            squareEl.classList.remove('hidden')
         })
 
-        } else if (levelChoice == 'medium'){
-          squaresEls.forEach((squareEl, index)=>{
-            let current = medium[index]
-            if (current) {
-            }  else  {
-                squareEl.classList.add('hidden')
-            }
-          })
+        if (levelChoice === easy){
+            
+            squaresEls.forEach((squareEl, index)=>{
+                let current = easy[index]
+                if (current) {           
+                }  else  {
+                    squareEl.classList.add('hidden')
+                };
+                btnContainer.remove();
+                render();
+                })
+                
+            } else if (levelChoice === medium){
+            squaresEls.forEach((squareEl, index)=>{
+                let current = medium[index]
+                if (current) {
+                }  else  {
+                    squareEl.classList.add('hidden')
+                };
+                btnContainer.remove();
+                render();
+            });
+            
+        } else if (levelChoice === hard){
+            squaresEls.forEach((squareEl, index)=>{
+                let current = hard[index]
+                if (current) {
+                }  else  {
+                    squareEl.classList.add('hidden')
+                };
+                btnContainer.remove();
+                render();
+                })
 
-        } else if (levelChoice == 'hard'){
-          squaresEls.forEach((squareEl, index)=>{
-            let current = hard[index]
-            if (current) {
-            }  else  {
-                squareEl.classList.add('hidden')
-            }
-          })
+        } else {
+            squaresEls.forEach((squareEl, index)=>{
+                let current = setup[index]
+                if (current) {
+                } else {
+                    squareEl.classList.add('hidden')
+                }
+            })
         }
+    };  
+
+    // RESET VALUES BACK TO INITIAL    
+ function resetGame(){
+    resetBoard()
+    setLevel()
+    let levelChoice;
+    let lives = 4;
+    let choiceOne = null;
+    let choiceOneDiv = null;
+    againContainer.remove()
+    cardContainer.classList.remove('hidden')
+    document.querySelector('body').appendChild(btnContainer);
+    gameOverContainer.remove();
+    
+    init();   
+}
+
+// RESEST ALL SQUARES => VISIBLE
+    function resetBoard(){
+        squaresEls.forEach((squareEl, index)=>{
+            let current = hard[index]
+            if (!current) {
+            } else {
+                squareEl.classList.remove('hidden')
+                squareEl.setAttribute('src', './imgs/cards/square.png')
+                squareEl.matched = false;
+                console.log('test')
+            }
+            })
+        };
+        
+        
+
+function clearBrains () {
+    fiveLives.remove()
+    fourLives.remove()
+    threeLives.remove()
+    twoLives.remove()
+    oneLives.remove()
+}
+
+
+
+
+
+// GAME START FUNCTIONS...
+
+init()
+        
+       
+function render(){
+    console.log('lives left:' + lives)
+     if (lives === 5){
+        document.querySelector('.brain-container').appendChild(fiveLives);
+
+     } else if (lives === 4){
+        fiveLives.remove()
+        document.querySelector('.brain-container').appendChild(fourLives);
+
+    } else if (lives === 3){
+        fourLives.remove()
+        document.querySelector('.brain-container').appendChild(threeLives);
+
+    } else if (lives === 2){
+        threeLives.remove()
+        document.querySelector('.brain-container').appendChild(twoLives);
+
+    } else if (lives === 1){
+        twoLives.remove()
+        document.querySelector('.brain-container').appendChild(oneLives);
+
+    } else {
+        levelChoice = null;
+        renderBoard();
+        oneLives.remove()
+        gameboardContainer.remove()
+        document.querySelector('body').appendChild(againContainer);
+        document.querySelector('body').appendChild(gameOverContainer);
+        console.log('score display 2')
+
     }
-   
-function scoreDisplay(){
-        if (lives == 5){
-            brains4.classList.remove('display')
-        }};
-        
-    // }
-
-
-    //     // render lives update after play
-    //     const imgs = document.querySelectorAll('.brains img');
-        
-    //     if (lives == 5){
-    //         for (const life5 of 'imgs'){
-    //             // .brains.classList.remove('display')
-    //             // need to remove hidden display of img #life-5
-    //         }
-            
-            
-            
-    //     } else if (lives == 4){
-            
-    //     } else if (lives == 3){
-
-    // } else if (lives == 2){
-
-    // } else if (lives == 1){
-
-    // } else {
-
-    // }
-
-
-
-
-
-
-
-
-
-
-
-loadBoard()
-// scoreboard()
+};
