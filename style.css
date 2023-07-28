@@ -15,7 +15,6 @@ button{
     background-repeat: no-repeat;
 }
 
-
 .card-container {
     grid-column: 2 / span 7;
     grid-row: 2 / span 7;
@@ -26,26 +25,29 @@ button{
     align-content: center;
 }
 
-.gameover-container {
-    display: grid;
-    grid-template-columns: repeat(9,10vh);
-    grid-template-rows: repeat(9,10vh);
-    /*
-    background-image: url("./imgs/gameover.png");
-    background-size: 60%;
-    background-repeat: no-repeat; */
-    align-items: center;
-}
-
-.gameover-image {
-    grid-column: 3 / span 5;
-    grid-row: 4 / span 2;
-}
-
 .sad-heart{
+    display: grid;
     grid-column: 4 / span 2;
     grid-row: 3;
     max-height: 20vh;
+}
+
+.gameover-image { 
+    display: grid;
+    grid-column: 3 / span 5;
+    grid-row: 4 / span 2;
+    height: 20vh;
+    width: 50vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.play-again{
+    grid-column: 4 / span 3;
+    grid-row: 6;
+    display: grid;
+    grid-template-columns: 30vh;
+    grid-template-rows: 10vh;
 }
 
 .level-select{
@@ -70,8 +72,7 @@ button{
     grid-row: 4;
     display: grid;
     grid-template-columns: 30vh;
-    grid-template-rows: 10vh;
-    /* border: 5px solid red; */    
+    grid-template-rows: 10vh;  
 } 
 .medium{
     grid-column: 4 / span 3;
@@ -79,7 +80,6 @@ button{
     display: grid;
     grid-template-columns: 30vh;
     grid-template-rows: 10vh;
-    /* border: 5px solid red; */
 }
 .hard{
     grid-column: 4 / span 3;
@@ -87,25 +87,7 @@ button{
     display: grid;
     grid-template-columns: 30vh;
     grid-template-rows: 10vh;
-    /* border: 5px solid red; */
 }  
-
-.play-again{
-    grid-column: 4 / span 3;
-    grid-row: 6;
-    display: grid;
-    grid-template-columns: 30vh;
-    grid-template-rows: 10vh;
-    /* border: 5px solid red; */
-}
-
-.gameover{
-    grid-column: 1 / span 9;
-    grid-row: 3 / span 6;
-    display: grid;
-    grid-template-columns: repeat(6, 10vh);
-    grid-template-rows: 10vh;
-}
 
 .button-container, .play-again-container{
     position: fixed;
@@ -114,7 +96,6 @@ button{
     align-items: center;;
     grid-column: 2 / span 7;
     grid-row: 2 / span 7;
-
     grid-template-columns: repeat(9,10vh);
     grid-template-rows: repeat(9,10vh);
     justify-content: center;
@@ -128,7 +109,6 @@ button{
     height: 8vh;
     align-content: bottom;
 }
-
 
 img{
     background-size: contain;
