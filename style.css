@@ -10,7 +10,7 @@ button{
     display: grid;
     grid-template-columns: repeat(9,10vh);
     grid-template-rows: repeat(9,10vh);
-    background-image: url("./imgs/gameboard.png");
+    background-image: url('./imgs/gameboard.png');
     background-size: contain;
     background-repeat: no-repeat;
 }

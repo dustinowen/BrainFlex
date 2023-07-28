@@ -19,8 +19,8 @@ const easy =[
     {value: 8, image: './imgs/cards/easy/easy-08.png', matched: false},
     {value: 9, image: './imgs/cards/easy/easy-09.png', matched: false},
     {value: 9, image: './imgs/cards/easy/easy-09.png', matched: false}
+];
 
-]
 const medium =[
     {value: 1, image: './imgs/cards/medium/medium-01.png', matched: false},
     {value: 1, image: './imgs/cards/medium/medium-01.png', matched: false},
@@ -46,7 +46,8 @@ const medium =[
     {value: 11, image: './imgs/cards/medium/medium-11.png', matched: false},
     {value: 12, image: './imgs/cards/medium/medium-12.png', matched: false},
     {value: 12, image: './imgs/cards/medium/medium-12.png', matched: false}
-]
+];
+
 const hard =[
     {value: 1, image: './imgs/cards/hard/hard-01.png', matched: false},
     {value: 1, image: './imgs/cards/hard/hard-01.png', matched: false},
@@ -78,45 +79,37 @@ const hard =[
     {value: 14, image: './imgs/cards/hard/hard-14.png', matched: false},
     {value: 15, image: './imgs/cards/hard/hard-15.png', matched: false},
     {value: 15, image: './imgs/cards/hard/hard-15.png', matched: false}
-]
+];
+
 const brainImgs = [
-    {value: 5, src: "./imgs/scoreboard/brain.hearteyes.png"},
-    {value: 4, src: "./imgs/scoreboard/brain.hearteyes.png"},
-    {value: 3, src: "./imgs/scoreboard/brain.hearteyes.png"},
-    {value: 2, src: "./imgs/scoreboard/brain.hearteyes.png"},
-    {value: 1, src: "./imgs/scoreboard/brain.hearteyes.png"},
-    {value: 0, src: "./imgs/scoreboard/brain.hearteyes.png"},
-]
+    {value: 5, src: './imgs/scoreboard/brain.hearteyes.png'},
+    {value: 4, src: './imgs/scoreboard/brain.hearteyes.png'},
+    {value: 3, src: './imgs/scoreboard/brain.hearteyes.png'},
+    {value: 2, src: './imgs/scoreboard/brain.hearteyes.png'},
+    {value: 1, src: './imgs/scoreboard/brain.hearteyes.png'},
+    {value: 0, src: './imgs/scoreboard/brain.hearteyes.png'},
+];
+
 const setup = [
 ];
+
 const levelSetup = [
     {value: easy},
     {value: medium},
     {value: hard}
-]
+];
 
-
-
-
-/*----- state variables -----*/
-
-let levelChoice
+let levelChoice;
 let lives = 5;
 let choiceOne = null;
 let choiceOneDiv = null;
-// let turnAvailable = null;
 
-
-
-
-/*----- cached elements  -----*/
-
-const squaresEls = document.querySelectorAll('.game-squares')
-const brainEls = document.querySelectorAll('.brain-container')
-const btnEls = document.querySelectorAll('.level')
-const lvlSelect = document.getElementsByClassName('level-select')
-const gameOverContainer = document.querySelector('.gameover-container')
-const gameboardContainer = document.querySelector('.gameboard-container')
+const squaresEls = document.querySelectorAll('.game-squares');
+const brainEls = document.querySelectorAll('.brain-container');
+const btnEls = document.querySelectorAll('.level');
+const lvlSelect = document.getElementsByClassName('level-select');
+const gameOverContainer = document.querySelector('.gameover-container');
+const gameboardContainer = document.querySelector('.gameboard-container');
 const btnContainer = document.querySelector('.button-container');
 const againContainer = document.querySelector('.play-again-container');
 const cardContainer = document.querySelector('.card-container');
@@ -125,131 +118,91 @@ const fourLives = document.querySelector('.brains3');
 const threeLives = document.querySelector('.brains2');
 const twoLives = document.querySelector('.brains1');
 const oneLives = document.querySelector('.brains0');
+const again = document.querySelector('.play-again-button');
+const levelSelectButtons = document.querySelectorAll('.lvlSelect');
 
 
-
-
-
-/*----- event listeners -----*/
 
 squaresEls.forEach(function (el, index) {
     el.addEventListener('click', function (evt) {
-        console.log(el)
-        let clickedCard
+        let clickedCard;
 
         if (levelChoice === easy) {
-            clickedCard = easy[index]
-            el.setAttribute('src', clickedCard.image)
-
+            clickedCard = easy[index];
+            el.setAttribute('src', clickedCard.image);
             if (choiceOne === null) {
-                // && clickedCard.matched === false ) {
                 choiceOne = clickedCard;
                 choiceOneDiv = evt.target;
             } else if (choiceOne.value === clickedCard.value) {
-console.log("pair")
-                    // choiceOne.matched = true;
-                    // clickedCard.matched = true;
-                    choiceOne = null;
-                    choiceOneDiv = null;
-            } else {
-                    setTimeout(function () { 
-                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
-                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
-                    console.log('not a pair')
-                    choiceOne = null;
-                    choiceOneDiv = null;
-                    }, 500);
-                    lives--
-                    render();
-                }
-
-        } else if (levelChoice === medium) {
-            clickedCard = medium[index]
-            el.setAttribute('src', clickedCard.image)
-
-            if (choiceOne === null) {
-                // && clickedCard.matched === false) {
-                // clickedCard.matched = true;
-                choiceOne = clickedCard;
-                choiceOneDiv = evt.target
-            } else if (choiceOne.value === clickedCard.value){
-console.log("pair")
-                // choiceOne.matched = true;
-                // clickedCard.matched = true;
                 choiceOne = null;
                 choiceOneDiv = null;
             } else {
                 setTimeout(function () { 
-                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
-                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
-                    console.log('not a pair')
-                    choiceOne = null;
-                    choiceOneDiv = null;
-                    }, 1000);
-                    lives--
-                    render();
-                }
+                choiceOneDiv.setAttribute('src', './imgs/cards/square.png');
+                squaresEls[index].setAttribute('src', './imgs/cards/square.png');
+                choiceOne = null;
+                choiceOneDiv = null;
+                }, 500);
+                lives--;
+                render();
+            };
+
+        } else if (levelChoice === medium) {
+            clickedCard = medium[index];
+            el.setAttribute('src', clickedCard.image);
+
+            if (choiceOne === null) {
+                choiceOne = clickedCard;
+                choiceOneDiv = evt.target;
+            } else if (choiceOne.value === clickedCard.value){
+                choiceOne = null;
+                choiceOneDiv = null;
+            } else {
+                setTimeout(function () { 
+                choiceOneDiv.setAttribute('src', './imgs/cards/square.png');
+                squaresEls[index].setAttribute('src', './imgs/cards/square.png');
+                choiceOne = null;
+                choiceOneDiv = null;
+                }, 1000);
+                lives--
+                render();
+            };
                 
         } else if (levelChoice === hard) {
             clickedCard = hard[index];
             el.setAttribute('src', clickedCard.image);
                 
             if (choiceOne === null) {
-                // && clickedCard.matched === false) {
-                // choiceOne.matched = true;
                 choiceOne = clickedCard;
                 choiceOneDiv = evt.target;
             } else if (choiceOne.value === clickedCard.value) {
-console.log("pair");
                 choiceOne = null;
                 choiceOneDiv = null;
             } else {
-                    setTimeout(function () { 
-                    choiceOneDiv.setAttribute('src', './imgs/cards/square.png')
-                    squaresEls[index].setAttribute('src', './imgs/cards/square.png')
-console.log('not a pair')
-                    choiceOne = null;
-                    choiceOneDiv = null;
+                setTimeout(function () { 
+                choiceOneDiv.setAttribute('src', './imgs/cards/square.png');
+                squaresEls[index].setAttribute('src', './imgs/cards/square.png');
+                choiceOne = null;
+                choiceOneDiv = null;
                 }, 1000);
                 lives--
                 render();
-            } 
-        }
-    })
+            } ;
+        };
+    });
 }); 
     
 
-const again = document.querySelector('.play-again-button')
 
-    again.addEventListener('click', function(){
-            location.reload();
+again.addEventListener('click', function(){
+    location.reload();
+});
 
-            console.log('play again button')
-        });
-
-
-
-
-const levelSelectButtons = document.querySelectorAll('.lvlSelect')
-
-    levelSelectButtons.forEach(function(bttn){
-        bttn.addEventListener('click', function(evt){     
-        levelChoice = evt.target.textContent;
-        console.log(squaresEls)
-        })
-    })
-        
-        
-        
-
-
-
-
-
-
-
-        
-/*----- functions -----*/
+levelSelectButtons.forEach(function(bttn){
+    bttn.addEventListener('click', function(evt){     
+    levelChoice = evt.target.textContent;
+    });
+});
         
 
 function init(){
@@ -258,30 +211,23 @@ function init(){
     setLevel();
     againContainer.remove();
     gameOverContainer.remove();
-    // btnContainer.remove()
-    document.querySelector('body').appendChild(gameboardContainer);
-    }
+    };
 
 
-//SET LEVEL BASED ON BUTTON SELECTION => SHUFFLE CARDS => RENDER BOARD
 function setLevel(){
     btnEls.forEach(function(el, index) {
-        console.log(el)
-     el.addEventListener('click', () => {
-         let clickedCard = levelSetup[index]
-console.log(clickedCard)
-         levelChoice = levelSetup[index].value;
-console.log(levelChoice);
-         shuffle(levelChoice);
-         renderBoard(levelChoice);
-     })
-})
+        el.addEventListener('click', () => {
+        let clickedCard = levelSetup[index];
+        levelChoice = levelSetup[index].value;
+        shuffle(levelChoice);
+        renderBoard(levelChoice);
+        });
+    });
 };
 
 
-// SHUFFLE ARRAY => easy, med, hard => SHUFFLE CARD PLACEMENT ON BOARD
 function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
+    let currentIndex = array.length, randomIndex;
     
     while (currentIndex != 0) {
         
@@ -293,32 +239,32 @@ function shuffle(array) {
         }
         
         return array;
-    }  
+    }  ;
     
-// ITERATE THROUGH OBJECTS BASED ON LEVEL => CREATE SQUARE FOR INDEX WITH VALUE, HIDE OTHERS
+
     function renderBoard(levelChoice){
 
         squaresEls.forEach((squareEl, index)=>{
-            squareEl.classList.remove('hidden')
-        })
+            squareEl.classList.remove('hidden');
+        });
 
         if (levelChoice === easy){
             
             squaresEls.forEach((squareEl, index)=>{
-                let current = easy[index]
-                if (current) {           
-                }  else  {
+                let current = easy[index];
+                if (current) {}  
+                else  {
                     squareEl.classList.add('hidden')
                 };
                 btnContainer.remove();
                 render();
-                })
+            });
                 
-            } else if (levelChoice === medium){
+        } else if (levelChoice === medium){
             squaresEls.forEach((squareEl, index)=>{
-                let current = medium[index]
-                if (current) {
-                }  else  {
+                let current = medium[index];
+                if (current) {}
+                else  {
                     squareEl.classList.add('hidden')
                 };
                 btnContainer.remove();
@@ -328,8 +274,8 @@ function shuffle(array) {
         } else if (levelChoice === hard){
             squaresEls.forEach((squareEl, index)=>{
                 let current = hard[index]
-                if (current) {
-                }  else  {
+                if (current) {}
+                else  {
                     squareEl.classList.add('hidden')
                 };
                 btnContainer.remove();
@@ -338,93 +284,78 @@ function shuffle(array) {
 
         } else {
             squaresEls.forEach((squareEl, index)=>{
-                let current = setup[index]
-                if (current) {
-                } else {
+                let current = setup[index];
+                if (current) {}
+                else {
                     squareEl.classList.add('hidden')
-                }
-            })
-        }
+                };
+            });
+        };
     };  
 
-    // RESET VALUES BACK TO INITIAL    
+   
  function resetGame(){
-    resetBoard()
-    setLevel()
+    resetBoard();
+    setLevel();
     let levelChoice;
     let lives = 4;
     let choiceOne = null;
     let choiceOneDiv = null;
-    againContainer.remove()
-    cardContainer.classList.remove('hidden')
+    againContainer.remove();
+    cardContainer.classList.remove('hidden');
     document.querySelector('body').appendChild(btnContainer);
     gameOverContainer.remove();
-    
     init();   
 }
 
-// RESEST ALL SQUARES => VISIBLE
     function resetBoard(){
         squaresEls.forEach((squareEl, index)=>{
             let current = hard[index]
-            if (!current) {
-            } else {
-                squareEl.classList.remove('hidden')
-                squareEl.setAttribute('src', './imgs/cards/square.png')
+            if (!current) {} 
+            else  {
+                squareEl.classList.remove('hidden');
+                squareEl.setAttribute('src', './imgs/cards/square.png');
                 squareEl.matched = false;
-                console.log('test')
-            }
-            })
-        };
+            };
+        });
+    };
         
         
 
 function clearBrains () {
-    fiveLives.remove()
-    fourLives.remove()
-    threeLives.remove()
-    twoLives.remove()
-    oneLives.remove()
+    fiveLives.remove();
+    fourLives.remove();
+    threeLives.remove();
+    twoLives.remove();
+    oneLives.remove();
 }
 
 
 
-
-
-// GAME START FUNCTIONS...
-
-init()
-        
-       
 function render(){
-    console.log('lives left:' + lives)
-     if (lives === 5){
+    if (lives === 5){
         document.querySelector('.brain-container').appendChild(fiveLives);
-
-     } else if (lives === 4){
-        fiveLives.remove()
+    } else if (lives === 4){
+        fiveLives.remove();
         document.querySelector('.brain-container').appendChild(fourLives);
-
     } else if (lives === 3){
-        fourLives.remove()
+        fourLives.remove();
         document.querySelector('.brain-container').appendChild(threeLives);
-
     } else if (lives === 2){
-        threeLives.remove()
+        threeLives.remove();
         document.querySelector('.brain-container').appendChild(twoLives);
-
     } else if (lives === 1){
-        twoLives.remove()
+        twoLives.remove();
         document.querySelector('.brain-container').appendChild(oneLives);
-
     } else {
         levelChoice = null;
         renderBoard();
-        oneLives.remove()
-        gameboardContainer.remove()
+        oneLives.remove();
+        gameboardContainer.remove();
         document.querySelector('body').appendChild(againContainer);
         document.querySelector('body').appendChild(gameOverContainer);
-        console.log('score display 2')
-
-    }
+    };
 };
+
+
+init(); 
