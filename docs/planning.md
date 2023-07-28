@@ -47,8 +47,7 @@ randomly generated locations for each card
 
 3. The Cards....
 3a. Match => cards stay face up
-3b. No Match (easy/medium) => cards turn back over, player loses one life ('brain')
-3c. No Match (hard) => cards turn back over
+3b. No Match => cards turn back over, player loses one life ('brain')
 
 
 
